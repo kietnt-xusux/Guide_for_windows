@@ -7,20 +7,21 @@ No description
 ```powershell
 # Mở PowerShell as Administrator
 ```
+hehe
 
-1. **Cài đặt Chocolatey**
+2. **Cài đặt Chocolatey**
 
 ```powershell
 Set-ExecutionPolicy Bypass -Scope Process -Force; [System.Net.ServicePointManager]::SecurityProtocol = [System.Net.ServicePointManager]::SecurityProtocol -bor 3072; iex ((New-Object System.Net.WebClient).DownloadString('https://community.chocolatey.org/install.ps1'))
 ```
 
-1. **Kiểm tra cài đặt**
+3. **Kiểm tra cài đặt**
 
 ```powershell
 choco --version
 ```
 
-1. **Cập nhật Chocolatey**
+4. **Cập nhật Chocolatey**
 
 ```powershell
 choco upgrade all -y
