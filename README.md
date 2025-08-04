@@ -1,5 +1,5 @@
 # Guide_for_windows
-No description
+
 # 🛠 **1. Cài đặt Chocolatey (Package Manager cho Windows)**
 
 1. **Mở PowerShell với quyền Administrator**
@@ -7,9 +7,6 @@ No description
 ```powershell
 # Mở PowerShell as Administrator
 ```
-hehe
-
-hehe
 
 2. **Cài đặt Chocolatey**
 
