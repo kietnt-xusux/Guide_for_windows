@@ -98,26 +98,9 @@ C:\php\php83>php-cgi.exe -b 127.0.0.1:9083
 choco install nginx
 ```
 
-### **🔹 Cài đặt thủ công (Khuyến nghị)**
-
-1. **Tải Nginx từ trang chủ**
-   - Truy cập: http://nginx.org/en/download.html
-   - Tải phiên bản Stable
-
-2. **Giải nén vào thư mục**
-   ```
-   C:\nginx\
-   ```
-
-3. **Khởi động Nginx**
-   ```powershell
-   cd C:\nginx
-   start nginx
-   ```
-
 ### **🔹 Cấu hình Nginx**
 
-**File `C:\nginx\conf\nginx.conf`:**
+**File `C:\tools\nginx-1.29.0\conf\nginx.conf`:**
 
 ```nginx
 worker_processes  1;
@@ -127,62 +110,89 @@ events {
 }
 
 http {
-    include       mime.types;
-    default_type  application/octet-stream;
-    
-    sendfile        on;
-    keepalive_timeout  65;
-    
-    # Upstream cho các phiên bản PHP
-    upstream php74 {
-        server 127.0.0.1:9074;
-    }
-    
-    upstream php80 {
-        server 127.0.0.1:9080;
-    }
-    
     upstream php81 {
         server 127.0.0.1:9081;
     }
-    
     upstream php82 {
         server 127.0.0.1:9082;
     }
-    
     upstream php83 {
         server 127.0.0.1:9083;
     }
-    
     upstream php84 {
         server 127.0.0.1:9084;
     }
-    
+
+
+
+    include       mime.types;
+    default_type  application/octet-stream;
+    sendfile        on;
+    keepalive_timeout  65;
+
     server {
-        listen       80;
+        listen       8084;
         server_name  localhost;
-        
-        location / {
-            root   html;
-            index  index.html index.htm;
+
+        root   C:/xampp/htdocs;
+        index  index.php index.html index.htm;
+
+        location /folder1/ {
+            root C:/xampp/htdocs;
+            index index.php;
+            try_files $uri $uri/ /folder1/index.php?$query_string;
+
+            location ~ ^/folder1/.*\.php$ {
+                include       fastcgi_params;
+                fastcgi_pass  php81;
+                fastcgi_index index.php;
+                fastcgi_param SCRIPT_FILENAME $document_root$fastcgi_script_name;
+            }
         }
-        
-        error_page   500 502 503 504  /50x.html;
-        location = /50x.html {
-            root   html;
+
+        location /folder2/ {
+            root C:/xampp/htdocs;
+            index index.php;
+            try_files $uri $uri/ /folder2/index.php?$query_string;
+
+            location ~ ^/folder2/.*\.php$ {
+                include       fastcgi_params;
+                fastcgi_pass  php82;
+                fastcgi_index index.php;
+                fastcgi_param SCRIPT_FILENAME $document_root$fastcgi_script_name;
+            }
+        }
+
+        location /folder3/ {
+            root C:/xampp/htdocs;
+            index index.php;
+            try_files $uri $uri/ /folder3/index.php?$query_string;
+
+            location ~ ^/demo/.*\.php$ {
+                include       fastcgi_params;
+                fastcgi_pass  php83;
+                fastcgi_index index.php;
+                fastcgi_param SCRIPT_FILENAME $document_root$fastcgi_script_name;
+            }
+        }
+
+        location /folder4/ {
+            root C:/xampp/htdocs;
+            index index.php;
+            try_files $uri $uri/ /folder4/index.php?$query_string;
+
+            location ~ ^/folder2/.*\.php$ {
+                include       fastcgi_params;
+                fastcgi_pass  php84;
+                fastcgi_index index.php;
+                fastcgi_param SCRIPT_FILENAME $document_root$fastcgi_script_name;
+            }
         }
     }
-    
-    # Include các file cấu hình riêng
-    include C:\nginx\conf\sites-enabled\*.conf;
 }
+
 ```
 
-### **🔹 Tạo thư mục sites-enabled**
-
-```powershell
-mkdir C:\nginx\conf\sites-enabled
-```
 
 # 💾 **5. Cài đặt & Cấu hình MySQL**
 
