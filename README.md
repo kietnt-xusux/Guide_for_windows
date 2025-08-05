@@ -168,7 +168,7 @@ http {
             index index.php;
             try_files $uri $uri/ /folder3/index.php?$query_string;
 
-            location ~ ^/demo/.*\.php$ {
+            location ~ ^/folder3/.*\.php$ {
                 include       fastcgi_params;
                 fastcgi_pass  php83;
                 fastcgi_index index.php;
@@ -181,7 +181,7 @@ http {
             index index.php;
             try_files $uri $uri/ /folder4/index.php?$query_string;
 
-            location ~ ^/folder2/.*\.php$ {
+            location ~ ^/folder4/.*\.php$ {
                 include       fastcgi_params;
                 fastcgi_pass  php84;
                 fastcgi_index index.php;
