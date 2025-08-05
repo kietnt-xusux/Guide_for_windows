@@ -77,31 +77,14 @@ date.timezone = Asia/Ho_Chi_Minh
 **Chạy phiên bản PHP**
 
 ```ini
-# C:\php\php74\php-fpm.conf
-[global]
-pid = C:\php\php74\php-fpm.pid
-error_log = C:\php\php74\php-fpm.log
-
-[www]
-listen = 127.0.0.1:9074
-listen.owner = www-data
-listen.group = www-data
-listen.mode = 0660
-user = www-data
-group = www-data
-pm = dynamic
-pm.max_children = 5
-pm.start_servers = 2
-pm.min_spare_servers = 1
-pm.max_spare_servers = 3
+# cmd
+C:\php\php83>php-cgi.exe -b 127.0.0.1:9083
 ```
 
 **Bảng cổng cho các phiên bản PHP:**
 
 | **PHP** | **Cổng FPM** |
 |---------|---------------|
-| PHP 7.4 | `9074` |
-| PHP 8.0 | `9080` |
 | PHP 8.1 | `9081` |
 | PHP 8.2 | `9082` |
 | PHP 8.3 | `9083` |
