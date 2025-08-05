@@ -131,7 +131,7 @@ http {
     keepalive_timeout  65;
 
     server {
-        listen       8084;
+        listen       80;
         server_name  localhost;
 
         root   C:/xampp/htdocs;
@@ -258,13 +258,12 @@ xdebug.client_port=9183
 ### **🔹 Chỉnh sửa file hosts**
 
 Mở file `C:\Windows\System32\drivers\etc\hosts` với quyền Administrator:
-
+Thêm vào cuối file
 ```
-127.0.0.1 laravel74.test
-127.0.0.1 laravel81.test
-127.0.0.1 abc.test
+127.0.0.1 laravel83.test
 ```
-
+**Test**
+Truy cập thử http://laravel83.test/folder1
 # 🍺 **8. Cài đặt Composer**
 
 ### **🔹 Cài đặt Composer**
