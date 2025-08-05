@@ -207,27 +207,15 @@ PS C:\tools\nginx-1.29.0> nginx
 choco install mysql
 ```
 
-### **🔹 Cài đặt thủ công (Khuyến nghị)**
-
-1. **Tải MySQL từ trang chủ**
-   - Truy cập: https://dev.mysql.com/downloads/mysql/
-   - Tải MySQL Community Server
-
-2. **Cài đặt MySQL**
-   - Chạy file .msi
-   - Chọn "Developer Default"
-   - Đặt mật khẩu root
-
-### **🔹 Khởi động MySQL**
-
-```powershell
-net start mysql
-```
-
-### **🔹 Kiểm tra trạng thái MySQL**
+### **🔹 Đăng nhập vào MySQL**
 
 ```powershell
 mysql -u root -p
+```
+**Chạy lệnh sau để đổi mật khẩu**
+```powershell
+ALTER USER 'root'@'localhost' IDENTIFIED BY 'matkhau_moi';
+FLUSH PRIVILEGES;
 ```
 
 # 🐞 **6. Cài đặt Xdebug cho từng phiên bản PHP**
