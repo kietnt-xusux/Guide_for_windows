@@ -192,7 +192,7 @@ http {
 }
 
 ```
-### **Chạy phiên bản PHP(với quyền admin)**
+### **Chạy nginx(với quyền admin)**
 
 ```ini
 # powershell
@@ -221,31 +221,33 @@ FLUSH PRIVILEGES;
 # 🐞 **6. Cài đặt Xdebug cho từng phiên bản PHP**
 
 ### **🔹 Tải Xdebug**
-
-1. **Truy cập: https://xdebug.org/wizard**
-2. **Nhập thông tin PHP của bạn**
-3. **Tải file .dll phù hợp**
+1.**Mở powershell, chạy lệnh bên dưới và copy output**
+```powershell
+C:\php\php83\php.exe -i > phpinfo83.txt
+notepad phpinfo83.txt
+```
+2. **Truy cập: https://xdebug.org/wizard**
+3. **Nhập thông tin PHP(vừa copy), nhấn analyse my phpinfo() output**
+3. **Tải file .dll phù hợp, làm theo hướng dẫn của web**
 
 ### **🔹 Cấu hình Xdebug**
 
 **Thêm vào file `php.ini` của từng phiên bản:**
 
 ```ini
-# C:\php\php74\php.ini
+# C:\php\php83\php.ini
 [xdebug]
-zend_extension="C:\php\php74\ext\php_xdebug-3.1.6-7.4-vc15-x86_64.dll"
+zend_extension="C:\php\php83\ext\php_xdebug.dll"
 xdebug.mode=debug
 xdebug.start_with_request=yes
 xdebug.client_host=127.0.0.1
-xdebug.client_port=9174
+xdebug.client_port=9183
 ```
 
 **Bảng cổng Xdebug:**
 
 | **PHP** | **Xdebug Port** |
 |---------|-----------------|
-| PHP 7.4 | `9174` |
-| PHP 8.0 | `9180` |
 | PHP 8.1 | `9181` |
 | PHP 8.2 | `9182` |
 | PHP 8.3 | `9183` |
