@@ -28,25 +28,14 @@ choco upgrade all -y
 
 # 🐘 **2. Cài đặt nhiều phiên bản PHP**
 
-### **🔹 Cài đặt PHP thông qua Chocolatey**
-
-```powershell
-# Cài đặt các phiên bản PHP
-choco install php --version=8.2.0
-choco install php --version=8.3.0
-choco install php --version=8.4.0
-```
-
-### **🔹 Cài đặt PHP thủ công (Khuyến nghị)**
+### **🔹 Cài đặt PHP thủ công **
 
 1. **Tải PHP từ trang chủ**
    - Truy cập: https://windows.php.net/download/
-   - Tải các phiên bản: 7.4, 8.0, 8.1, 8.2, 8.3, 8.4
+   - Tải các phiên bản: 8.1, 8.2, 8.3, 8.4
 
 2. **Giải nén vào thư mục riêng**
    ```
-   C:\php\php74\
-   C:\php\php80\
    C:\php\php81\
    C:\php\php82\
    C:\php\php83\
@@ -57,7 +46,7 @@ choco install php --version=8.4.0
    - Mở System Properties > Advanced > Environment Variables
    - Thêm đường dẫn vào PATH:
    ```
-   C:\php\php74;C:\php\php80;C:\php\php81;C:\php\php82;C:\php\php83;C:\php\php84
+   C:\php\php81;C:\php\php82;C:\php\php83;C:\php\php84
    ```
 
 ### **🔹 Kiểm tra phiên bản PHP**
@@ -68,32 +57,24 @@ php -v
 
 # ⚡ **3. Cấu hình PHP để chạy song song**
 
-### **🔹 Cấu hình PHP-FPM cho từng phiên bản**
-
-Mỗi phiên bản PHP cần có file `php.ini` và `php-fpm.conf` riêng.
-
 **Tạo file `php.ini` cho từng phiên bản:**
 
 ```ini
-# C:\php\php74\php.ini
+# C:\php\php83\php.ini
 [PHP]
-extension_dir = "C:\php\php74\ext"
+extension_dir = "C:\php\php83\ext"
 extension=curl
 extension=gd
 extension=mbstring
 extension=openssl
 extension=pdo_mysql
 extension=mysqli
+extension=fileinfo
 
-[Date]
 date.timezone = Asia/Ho_Chi_Minh
-
-[Session]
-session.save_handler = files
-session.save_path = "C:\php\php74\tmp"
 ```
 
-**Tạo file `php-fpm.conf` cho từng phiên bản:**
+**Chạy phiên bản PHP**
 
 ```ini
 # C:\php\php74\php-fpm.conf
