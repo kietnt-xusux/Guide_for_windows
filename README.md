@@ -192,7 +192,12 @@ http {
 }
 
 ```
+### **Chạy phiên bản PHP(với quyền admin)**
 
+```ini
+# powershell
+PS C:\tools\nginx-1.29.0> nginx
+```
 
 # 💾 **5. Cài đặt & Cấu hình MySQL**
 
