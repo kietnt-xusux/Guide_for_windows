@@ -1,6 +1,6 @@
 # Guide_for_windows
 
-# 🛠 **1. Cài đặt Chocolatey (Package Manager cho Windows)**
+# **1. Cài đặt Chocolatey (Package Manager cho Windows)**
 
 1. **Mở PowerShell với quyền Administrator**
 
@@ -26,7 +26,7 @@ choco --version
 choco upgrade all -y
 ```
 
-# 🐘 **2. Cài đặt nhiều phiên bản PHP**
+# **2. Cài đặt nhiều phiên bản PHP**
 
 ### **🔹 Cài đặt PHP thủ công **
 
@@ -55,7 +55,7 @@ choco upgrade all -y
 php -v
 ```
 
-# ⚡ **3. Cấu hình PHP để chạy song song**
+# **3. Cấu hình PHP để chạy song song**
 
 **Tạo file `php.ini` cho từng phiên bản:**
 
@@ -90,7 +90,7 @@ C:\php\php83>php-cgi.exe -b 127.0.0.1:9083
 | PHP 8.3 | `9083` |
 | PHP 8.4 | `9084` |
 
-# 🌐 **4. Cài đặt & Cấu hình Nginx**
+# **4. Cài đặt & Cấu hình Nginx**
 
 ### **🔹 Cài đặt Nginx**
 
@@ -199,7 +199,7 @@ http {
 PS C:\tools\nginx-1.29.0> nginx
 ```
 
-# 💾 **5. Cài đặt & Cấu hình MySQL**
+# **5. Cài đặt & Cấu hình MySQL**
 
 ### **🔹 Cài đặt MySQL**
 
@@ -218,7 +218,7 @@ ALTER USER 'root'@'localhost' IDENTIFIED BY 'matkhau_moi';
 FLUSH PRIVILEGES;
 ```
 
-# 🐞 **6. Cài đặt Xdebug cho từng phiên bản PHP**
+# **6. Cài đặt Xdebug cho từng phiên bản PHP**
 
 ### **🔹 Tải Xdebug**
 1.**Mở powershell, chạy lệnh bên dưới và copy output**
@@ -253,7 +253,7 @@ xdebug.client_port=9183
 | PHP 8.3 | `9183` |
 | PHP 8.4 | `9184` |
 
-# 🌀 **7. Virtual Host project Laravel**
+# **7. Virtual Host project Laravel**
 
 ### **🔹 Chỉnh sửa file hosts**
 
@@ -264,7 +264,7 @@ Thêm vào cuối file
 ```
 **Test**
 Truy cập thử http://laravel83.test/folder1
-# 🍺 **8. Cài đặt Composer**
+# **8. Cài đặt Composer**
 
 ### **🔹 Cài đặt Composer**
 
@@ -287,7 +287,7 @@ choco install composer
 composer --version
 ```
 
-# 🔆 **9. Cài đặt NodeJS**
+# **9. Cài đặt NodeJS**
 
 ### **🔹 Cài đặt NodeJS**
 
@@ -319,7 +319,7 @@ npm --version
 yarn --version
 ```
 
-# 🌟 **10. Cài đặt dự án mới**
+# **10. Cài đặt dự án mới**
 
 ### **🔹 Clone dự án**
 
