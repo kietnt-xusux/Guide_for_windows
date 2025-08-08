@@ -551,6 +551,7 @@ nginx -s reload
 
 # **Các lệnh cơ bản**
 1.**CREATE TABLE**
+
 	```mysql
  	create table users (
 		id int primary key auto_increment,
@@ -559,6 +560,7 @@ nginx -s reload
     	created_at datetime default current_timestamp
 	);
  	```
+  
   	```mysql
    	create table posts (
 		id int primary key auto_increment,
