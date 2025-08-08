@@ -406,7 +406,7 @@ nginx -s reload
 ```
 # Git flow cơ bản
 
-# *I.*Các thao tác git cơ bản**
+# I.**Các thao tác git cơ bản**
 1. **Tạo một kho lưu trữ - git init**
    
    ```cmd
@@ -533,7 +533,18 @@ nginx -s reload
    ```cmd
    git branch -D feature/authen
    ```
+# II.**Quy trình Git Flow đơn giản**
 
+	<img width="1213" height="774" alt="image" src="https://github.com/user-attachments/assets/fc5d535f-1ef2-4899-b69b-4cc6122dd3d2" />
+**Master branch:** Code ở đây được sử dụng để triển khai (deploy) cho người dùng cuối (end user).
+
+**Develop branch:** Được tách ra từ master branch (thường là ngay sau khi tạo repository), đây là branch dành cho việc phát triển. Trong quá trình xây dựng sản phẩm thì đây là branch dành cho việc coding, testing, v.v.
+
+**Feature branch:** Là nhánh tính năng, mỗi thành viên trong team khi nhận nhiệm vụ sẽ tách một branch mới từ develop branch và bắt đầu việc coding. Sau khi hoàn thành nhiệm vụ thì feature branch sẽ được merge vào develop branch, code ở đây thường được deploy thành môi trường test và tester sẽ test sản phẩm của dev tại đây.
+
+**Release branch:** Là nhánh phát hành sản phẩm, lấy ví dụ để hoàn thiện một sản phẩm cho khách hàng cần tới 3 tháng thì thông thường mỗi 1-2 tuần cần release những chức năng được hoàn thiện để demo cho khách hàng.
+
+**Hotfix branch:** Là nhánh được tách ra từ master branch dành cho việc sửa những lỗi nghiêm trọng trong quá trình sản phẩm đang chạy thực tế. Vì đây thường là những lỗi cần fix ngay nên sau khi fix, test thì branch này sẽ được merge ngay vào master. Sau đó branch này cũng được merge về develop để fix những lỗi đó tại develop branch.
 
 
 
