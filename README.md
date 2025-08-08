@@ -586,19 +586,59 @@ nginx -s reload
 ```
 3.**SELECT,WHERE,ORDER BY,LIMIT**
 
-	Lấy tất cả users
+	--Lấy tất cả users
 ```
 	select * from users
 ```
-	Lấy ra user có id = 1
+	--Lấy ra user có id = 1
 ```
 	select * from users
 	where id = 1;
 ```
-	Lấy 2 bài viết mới nhất
+	--Lấy 2 bài viết mới nhất
 ```
 	select * from posts 
 	order by created_at desc 
 	limit 2;
 ```
-
+4.**UPDATE**
+```
+	update users
+	set email = "newemail@gmail.com"
+	where id = 1;
+```
+5.**DELETE**
+```
+	delete from posts
+	where id = 3;
+```
+6.**GROUP BY, HAVING**
+	--Thống kê các user_id có số bài post >=2
+```
+	select user_id, count(*) as total_posts
+	from posts
+	group by user_id
+	having total_posts >= 2;
+```
+7.**INNER JOIN, LEFT JOIN, RIGHT JOIN**
+	-- INNER JOIN: Chỉ lấy các user có bài viết
+ ```
+	select users.name, posts.title
+	from users
+	inner join posts
+	on users.id = posts.user_id;
+```
+	-- LEFT JOIN: Lấy tất cả users, kể cả khi không có bài viết
+ ```
+	select users.name, posts.title
+	from users
+	left join posts
+	on users.id = posts.user_id;
+```
+	---- RIGHT JOIN: Lấy tất cả bài viết, kể cả khi không có user tương ứng
+```
+	select users.name, posts.title
+	from users
+	right join posts
+	on users.id = posts.user_id;
+```
