@@ -550,7 +550,7 @@ nginx -s reload
 # Cơ sở dữ liệu cơ bản (MySQL)
 
 # **Các lệnh cơ bản**
-1.**CREATE TABLE**
+1. **CREATE TABLE**
 
 ```
  	create table users (
@@ -571,7 +571,7 @@ nginx -s reload
     	foreign key(user_id) references users(id)
 	);
 ```
-2.**INSERT**
+2. **INSERT**
 
 ```
 	insert into users (name, email)
@@ -584,7 +584,7 @@ nginx -s reload
 	(1,"Bai viet 2","Noi dung bai viet 2"),
 	(2,"Bai viet 3","Noi dung bai viet 3");
 ```
-3.**SELECT,WHERE,ORDER BY,LIMIT**
+3. **SELECT,WHERE,ORDER BY,LIMIT**
 
 	--Lấy tất cả users
 ```
@@ -601,18 +601,19 @@ nginx -s reload
 	order by created_at desc 
 	limit 2;
 ```
-4.**UPDATE**
+4. **UPDATE**
 ```
 	update users
 	set email = "newemail@gmail.com"
 	where id = 1;
 ```
-5.**DELETE**
+5. **DELETE**
 ```
 	delete from posts
 	where id = 3;
 ```
-6.**GROUP BY, HAVING**
+6. **GROUP BY, HAVING**
+   
 	--Thống kê các user_id có số bài post >=2
 ```
 	select user_id, count(*) as total_posts
@@ -620,7 +621,8 @@ nginx -s reload
 	group by user_id
 	having total_posts >= 2;
 ```
-7.**INNER JOIN, LEFT JOIN, RIGHT JOIN**
+7. **INNER JOIN, LEFT JOIN, RIGHT JOIN**
+   
 	-- INNER JOIN: Chỉ lấy các user có bài viết
  ```
 	select users.name, posts.title
