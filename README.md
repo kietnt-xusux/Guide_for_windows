@@ -405,3 +405,10 @@ cd C:\nginx
 nginx -s reload
 ```
 # Git flow cơ bản
+
+# *I.*Các thao tác git cơ bản**
+1. **Tạo một kho lưu trữ - git init**
+   ```cmd
+   cd tiktok
+   git init
+   ```
