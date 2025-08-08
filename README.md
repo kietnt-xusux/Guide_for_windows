@@ -644,3 +644,11 @@ nginx -s reload
 	right join posts
 	on users.id = posts.user_id;
 ```
+8. **Nguyên tắc thiết kế CSDL quan hệ**
+   
+   	- Mỗi bảng lưu một loại thực thể (users, posts, orders, ...)
+	- Sử dụng khóa chính (PRIMARY KEY) duy nhất cho mỗi bảng
+	- Liên kết các bảng bằng khóa ngoại (FOREIGN KEY)
+	- Chuẩn hóa dữ liệu (tránh trùng lặp thông tin)
+	- Đặt tên cột, bảng rõ ràng, dễ hiểu
+
