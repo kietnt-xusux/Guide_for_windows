@@ -423,6 +423,7 @@ nginx -s reload
    hello.txt
    ```
 3. **Staging - git add**
+   
    Git có một khái niệm là Staging Area, lệnh git add được sử dụng để di chuyển các file có sự thay đổi tới khu vực này. Staging Area là nơi chứa các files chuẩn bị được commit.
    Add 1 file:
    ```cmd
@@ -441,7 +442,8 @@ nginx -s reload
      (use "git rm --cached <file>..." to unstage)
 	new file:   hello.txt
    ```
-4.**Cam kết - git commit**
+ 4.**Cam kết - git commit**
+ 
    Sử dụng lệnh này để di chuyển files từ Staging Area tới vùng Local Repository trong kho lưu trữ của bạn. Dữ liệu nằm tại vùng này sẽ sẵn sàng để tải lên kho lưu trữ từ xa (remote          repository).
    ```cmd
    git commit -m "Create hello.txt"
@@ -450,21 +452,25 @@ nginx -s reload
     create mode 100644 hello.txt
    ```
    -m viết tắt của message
-5.**Thêm remote repository vào cài đặt phía local**
+ 5.**Thêm remote repository vào cài đặt phía local**
+ 
    Lệnh trên sẽ thêm remote repository vào file cấu hình phía local
    ```cmd
    git remote add origin your_repo_URL
    ```
-6.**Tải lên máy chủ - git push**
+ 6.**Tải lên máy chủ - git push**
+ 
    ```cmd
    git push origin master
    ```
-7.**Nhân bản kho lưu trữ - git clone**
+ 7.**Nhân bản kho lưu trữ - git clone**
+ 
    Nhân bản (clone) kho lưu trữ sử dụng khi bạn cần lấy source code từ remote về local. 
    ```cmd
    git clone your_repo_URL
    ```
-8.**Lấy các thay đổi từ máy chủ - git pull**
+ 8.**Lấy các thay đổi từ máy chủ - git pull**
+ 
    Trong trường hợp trên remote có những thay đổi mới bạn có thể tải chúng về và hợp nhất với dữ liệu tại local repository của bạn
    Chạy git pull origin master để lấy các thay đổi từ nhánh "master" trên remote về nhánh "master" trên local.
    ```cmd
@@ -473,11 +479,13 @@ nginx -s reload
     * branch            master     -> FETCH_HEAD
    Already up-to-date.
    ```
-9.**Tạo mới một nhánh - git branch**
+ 9.**Tạo mới một nhánh - git branch**
+ 
    ```cmd
    git branch develop
    ```
-10.**Chuyển nhánh - git checkout**
+ 10.**Chuyển nhánh - git checkout**
+ 
    Xem các branch đang có trên local và bạn đang ở branch nào, dấu sao (*) trước tên branch thể hiện bạn đang ở branch đó.
    ```cmd
    git branch
@@ -493,7 +501,8 @@ nginx -s reload
    git checkout -b feature/authen
    ```
    -b (branch)
-11.**Hợp nhất branch - git merge**
+ 11.**Hợp nhất branch - git merge**
+ 
    Di chuyển về branch cần hợp nhất bằng lệnh checkout.
    ```cmd
    git checkout branch_mane1 (Nhánh nhận hợp nhất or nhánh hiện tại)
@@ -503,7 +512,8 @@ nginx -s reload
    git merge branch_mane2 (Nhánh chỉ định hợp nhất)
    ```
    Lệnh trên giúp hợp nhất các branch (Hợp nhất branch_mane2 vào branch_mane1). (Chú ý xử lý xung đột code)
-12.**Git rebase: (Hợp nhất code)**
+ 12.**Git rebase: (Hợp nhất code)**
+ 
    Di chuyển về nhánh nhận sự hợp nhất.
    ```cmd
    git checkout branch_mane1
@@ -515,7 +525,8 @@ nginx -s reload
    *Tương đồng với merge nhưng có sự khác biệt như sau:
       Merge: Chỉ lấy nội dung commit cuối cùng của hai nhánh, tích hợp tạo thành commit mới. Các commit trước đó được giữ nguyên không thay đổi.
       Rebase: Lấy code từ branch_mane2, từ những commit ở branch_mane2 tích hợp đồng thời tái tạo lại commit mới ở branch_mane1 (Các commit đã tồn tại bị bỏ đi).*
-13.**Xóa một nhánh**
+ 13.**Xóa một nhánh**
+ 
    ```cmd
    git branch -D feature/authen
    ```
