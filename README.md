@@ -535,7 +535,8 @@ nginx -s reload
    ```
 # II.**Quy trình Git Flow đơn giản**
 
-	<img width="1213" height="774" alt="image" src="https://github.com/user-attachments/assets/fc5d535f-1ef2-4899-b69b-4cc6122dd3d2" />
+	![image](https://github.com/user-attachments/assets/fc5d535f-1ef2-4899-b69b-4cc6122dd3d2)
+
 **Master branch:** Code ở đây được sử dụng để triển khai (deploy) cho người dùng cuối (end user).
 
 **Develop branch:** Được tách ra từ master branch (thường là ngay sau khi tạo repository), đây là branch dành cho việc phát triển. Trong quá trình xây dựng sản phẩm thì đây là branch dành cho việc coding, testing, v.v.
