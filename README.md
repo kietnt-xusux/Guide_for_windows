@@ -501,6 +501,7 @@ nginx -s reload
    git checkout -b feature/authen
    ```
    -b (branch)
+   
 11. **Hợp nhất branch - git merge**
  
    Di chuyển về branch cần hợp nhất bằng lệnh checkout.
