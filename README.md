@@ -444,7 +444,7 @@ nginx -s reload
    ```
  4. **Cam kết - git commit**
  
-   Sử dụng lệnh này để di chuyển files từ Staging Area tới vùng Local Repository trong kho lưu trữ của bạn. Dữ liệu nằm tại vùng này sẽ sẵn sàng để tải lên kho lưu trữ từ xa (remote          repository).
+   Sử dụng lệnh này để di chuyển files từ Staging Area tới vùng Local Repository trong kho lưu trữ của bạn. Dữ liệu nằm tại vùng này sẽ sẵn sàng để tải lên kho lưu trữ từ xa (remote          	repository).
    ```cmd
    git commit -m "Create hello.txt"
    [master (root-commit) 959cec2] Create hello.txt
