@@ -547,5 +547,29 @@ nginx -s reload
 
 **Hotfix branch:** Là nhánh được tách ra từ master branch dành cho việc sửa những lỗi nghiêm trọng trong quá trình sản phẩm đang chạy thực tế. Vì đây thường là những lỗi cần fix ngay nên sau khi fix, test thì branch này sẽ được merge ngay vào master. Sau đó branch này cũng được merge về develop để fix những lỗi đó tại develop branch.
 
+# Cơ sở dữ liệu cơ bản (MySQL)
+
+# **Các lệnh cơ bản**
+1.**CREATE TABLE**
+	```mysql
+ 	create table users (
+		id int primary key auto_increment,
+    	name varchar(50),
+    	email varchar(50),
+    	created_at datetime default current_timestamp
+	);
+ 	```
+  	```mysql
+   	create table posts (
+		id int primary key auto_increment,
+    	user_id int,
+    	title varchar(255),
+    	content text,
+    	created_at datetime default current_timestamp,
+    	foreign key(user_id) references users(id)
+	);
+ 	```
+
+
 
 
