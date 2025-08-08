@@ -552,7 +552,7 @@ nginx -s reload
 # **Các lệnh cơ bản**
 1.**CREATE TABLE**
 
-	```cmd
+	```
  	create table users (
 		id int primary key auto_increment,
     	name varchar(50),
