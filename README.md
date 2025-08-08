@@ -513,6 +513,7 @@ nginx -s reload
    git merge branch_mane2 (Nhánh chỉ định hợp nhất)
    ```
    Lệnh trên giúp hợp nhất các branch (Hợp nhất branch_mane2 vào branch_mane1). (Chú ý xử lý xung đột code)
+   
 12. **Git rebase: (Hợp nhất code)**
  
    Di chuyển về nhánh nhận sự hợp nhất.
@@ -526,6 +527,7 @@ nginx -s reload
    *Tương đồng với merge nhưng có sự khác biệt như sau:
       Merge: Chỉ lấy nội dung commit cuối cùng của hai nhánh, tích hợp tạo thành commit mới. Các commit trước đó được giữ nguyên không thay đổi.
       Rebase: Lấy code từ branch_mane2, từ những commit ở branch_mane2 tích hợp đồng thời tái tạo lại commit mới ở branch_mane1 (Các commit đã tồn tại bị bỏ đi).*
+	  
 13. **Xóa một nhánh**
  
    ```cmd
