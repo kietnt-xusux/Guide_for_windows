@@ -485,8 +485,7 @@ nginx -s reload
    git branch develop
    ```
 10. **Chuyển nhánh - git checkout**
-    
-   Xem các branch đang có trên local và bạn đang ở branch nào, dấu sao (*) trước tên branch thể hiện bạn đang ở branch đó.
+    Xem các branch đang có trên local và bạn đang ở branch nào, dấu sao (*) trước tên branch thể hiện bạn đang ở branch đó.
    ```cmd
    git branch
      develop
