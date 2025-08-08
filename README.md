@@ -535,7 +535,7 @@ nginx -s reload
    ```
 # II.**Quy trình Git Flow đơn giản**
 
-	![image](https://github.com/user-attachments/assets/fc5d535f-1ef2-4899-b69b-4cc6122dd3d2)
+
 
 **Master branch:** Code ở đây được sử dụng để triển khai (deploy) cho người dùng cuối (end user).
 
