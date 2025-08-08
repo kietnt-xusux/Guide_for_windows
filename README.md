@@ -552,7 +552,7 @@ nginx -s reload
 # **Các lệnh cơ bản**
 1.**CREATE TABLE**
 
-	```mysql
+	```cmd
  	create table users (
 		id int primary key auto_increment,
     	name varchar(50),
@@ -561,7 +561,7 @@ nginx -s reload
 	);
  	```
   
-  	```mysql
+  	```cmd
    	create table posts (
 		id int primary key auto_increment,
     	user_id int,
