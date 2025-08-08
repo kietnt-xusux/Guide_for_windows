@@ -561,7 +561,7 @@ nginx -s reload
 	);
 ```
   
-  	```cmd
+```
    	create table posts (
 		id int primary key auto_increment,
     	user_id int,
@@ -570,8 +570,35 @@ nginx -s reload
     	created_at datetime default current_timestamp,
     	foreign key(user_id) references users(id)
 	);
- 	```
+```
+2.**INSERT**
 
+```
+	insert into users (name, email)
+	values ("Nguyen Van A","a@gamil.com"),
+		("Nguyen Thi B","b@gmail.com");
+```
+```
+	insert into posts (user_id, title,content) values
+	(1,"Bai viet 1","Noi dung bai viet 1"),
+	(1,"Bai viet 2","Noi dung bai viet 2"),
+	(2,"Bai viet 3","Noi dung bai viet 3");
+```
+3.**SELECT,WHERE,ORDER BY,LIMIT**
 
-
+	Lấy tất cả users
+```
+	select * from users
+```
+	Lấy ra user có id = 1
+```
+	select * from users
+	where id = 1;
+```
+	Lấy 2 bài viết mới nhất
+```
+	select * from posts 
+	order by created_at desc 
+	limit 2;
+```
 
