@@ -552,14 +552,14 @@ nginx -s reload
 # **Các lệnh cơ bản**
 1.**CREATE TABLE**
 
-	```
+```
  	create table users (
 		id int primary key auto_increment,
     	name varchar(50),
     	email varchar(50),
     	created_at datetime default current_timestamp
 	);
- 	```
+```
   
   	```cmd
    	create table posts (
